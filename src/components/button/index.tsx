@@ -12,7 +12,6 @@ function Button({ children, style, isLoading = false, ...rest }: ButtonProps) {
     return (
         <TouchableOpacity style={[s.container, style]} activeOpacity={0.8} disabled={isLoading} {...rest}>
             {isLoading ? <ActivityIndicator size="small" color={colors.gray[100]} /> : children}
-            {children}
         </TouchableOpacity>
     )
 }

@@ -5,6 +5,7 @@ import { colors, fontFamily } from "@/src/styles/theme";
 export const s = StyleSheet.create({
     container: {
         height: 36,
+        borderRadius: 8,
         backgroundColor: colors.gray[100],
         borderWidth: 1,
         borderColor: colors.gray[300],
