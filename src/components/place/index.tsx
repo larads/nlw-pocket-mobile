@@ -1,6 +1,7 @@
-import { TouchableOpacity, View, Image, Text, TouchableOpacityProps } from "react-native";
-import { s } from "./styles";
 import { IconTicket } from "@tabler/icons-react-native";
+import { TouchableOpacity, View, Image, Text, TouchableOpacityProps } from "react-native";
+
+import { s } from "./styles";
 import { colors } from "@/src/styles/colors";
 
 export type PlaceProps = {
@@ -21,7 +22,9 @@ export function Place({ data, ...rest }: Props) {
             <Image style={s.image} source={{ uri: data.cover }} />
             <View style={s.content}>
                 <Text style={s.name}>{data.name}</Text>
-                <Text style={s.description}>{data.description}</Text>
+                <Text style={s.description} numberOfLines={2}>
+                    {data.description}
+                </Text>
 
                 <View style={s.footer}>
                     <IconTicket size={16} color={colors.red.base} />
